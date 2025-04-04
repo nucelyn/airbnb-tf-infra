@@ -15,6 +15,7 @@ pipeline {
         stage('SCM checkout') {
             steps {
                 echo 'Cloning code base with jenkins server'
+                echo 'Testing CI code base with jenkins server'
                 git branch: 'main', credentialsId: 'b7d91645-4a5f-4549-b3d7-d35a07b7879a', url: 'https://github.com/nucelyn/airbnb-tf-infra.git'
                 sh 'ls'
             }
